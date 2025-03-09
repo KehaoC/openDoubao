@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# OpenDoubao - 开源豆包
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 项目介绍
 
-## Get started
+这是一个基于 Expo 和 React Native 开发的开源豆包应用，旨在提供一个轻量级、高性能的移动应用解决方案。本项目采用了最新的 Expo 技术栈，支持 iOS、Android 和 Web 多平台部署。
 
-1. Install dependencies
+## 技术栈
 
-   ```bash
-   npm install
-   ```
+- Expo (v52.0.37)
+- React Native (v0.76.7)
+- React Navigation
+- TypeScript
+- Expo Router (文件路由系统)
+- 其他重要依赖：
+  - expo-blur
+  - expo-haptics
+  - react-native-reanimated
+  - react-native-gesture-handler
+  - react-native-webview
 
-2. Start the app
+## 主要功能
 
-   ```bash
-    npx expo start
-   ```
+- 📱 多平台支持（iOS、Android、Web）
+- 🎯 基于文件的路由系统
+- 🎨 现代化 UI 设计
+- 📦 内置标签页导航
+- 🔄 手势支持
+- 💫 流畅的动画效果
 
-In the output, you'll find options to open the app in a
+## 快速开始
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 1. 安装依赖
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. 启动开发服务器
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+启动后，你可以选择以下方式运行应用：
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- 使用 [Expo Go](https://expo.dev/go) 应用扫描二维码
+- 在 [iOS 模拟器](https://docs.expo.dev/workflow/ios-simulator/)上运行
+- 在 [Android 模拟器](https://docs.expo.dev/workflow/android-studio-emulator/)上运行
+- 在浏览器中运行 Web 版本
 
-## Join the community
+## 项目结构
 
-Join our community of developers creating universal apps.
+```
+├── app/                # 应用主目录
+│   ├── (tabs)/        # 标签页路由
+│   ├── _layout.tsx    # 根布局组件
+│   └── +not-found.tsx # 404页面
+├── assets/            # 静态资源
+│   ├── fonts/        # 字体文件
+│   └── images/       # 图片资源
+├── components/       # 可复用组件
+└── package.json      # 项目配置和依赖
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 开发指南
+
+1. 所有页面组件都放在 `app` 目录下，遵循文件路由系统
+2. 可复用的组件放在 `components` 目录下
+3. 静态资源（图片、字体等）放在 `assets` 目录下
+4. 使用 TypeScript 编写代码，确保类型安全
+
+## 贡献指南
+
+1. Fork 本仓库
+2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交你的改动 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 提交 Pull Request
+
+## 许可证
+
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+## 联系我们
+
+如果你有任何问题或建议，欢迎提出 Issue 或在社区中讨论。
+
+- GitHub Issues: [提交问题](https://github.com/yourusername/opendoubao/issues)
+- 社区讨论: [加入讨论](https://github.com/yourusername/opendoubao/discussions)
