@@ -1,15 +1,16 @@
 import { Text, View, StyleSheet, FlatList, Image } from 'react-native'
 import { useState } from 'react'
-import { Link, Stack } from 'expo-router'
+import { Link, Stack, router } from 'expo-router'
 
 import IconButton from '@/components/iconButton'
 import Dropdown from '@/components/dropdown'
+import {data} from '@/data/mock'
 
 export default function Index() {
     const [showDropdown, setShowDropdown] = useState(false)
 
     const onPressSearch = () => {
-        alert('搜索');
+        router.push('/conversation/search')
     }
 
     const onPressAdd = () => {
@@ -39,7 +40,7 @@ export default function Index() {
                 style={styles.list}
                 renderItem={( {item} ) => {
                     return (
-                        <Link href={`/conversation/${item.name}`} style={styles.itemContainer}>
+                        <Link href={`/conversation/${item.id}`} style={styles.itemContainer}>
                             <Image
                                 source={item.avatar}
                                 style={styles.avatar}
@@ -95,21 +96,3 @@ const styles = StyleSheet.create({
         color: '#666',
     },
 })
-
-const data = [
-    {
-        avatar: require('@/assets/images/avatars/doubao.png'),
-        name: '豆包',
-        lastMessage: '聊聊新话题'
-    },
-    {
-        avatar: require('@/assets/images/avatars/mia.png'),
-        name: 'Mia (美国开朗女生) ',
-        lastMessage: "I'm not quite sure I get what you mean..."
-    },
-    {
-        avatar: require('@/assets/images/avatars/shengongbao.png'),
-        name: '申公豹（结巴版）',
-        lastMessage: '十日不见，你对我结巴的事还耿耿于怀？'
-    },
-]

@@ -9,6 +9,9 @@ export default function ConversationLayout() {
             }}/>
             <Stack.Screen name="[id]" options={{
             }}/>
+            <Stack.Screen name="search" options={{
+                headerShown: false
+            }}/>
         </Stack>
 
     )
