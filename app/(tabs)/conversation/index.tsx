@@ -1,15 +1,23 @@
 import { Text, View, StyleSheet, FlatList, Image } from 'react-native'
+import { useState } from 'react'
 import { Link, Stack } from 'expo-router'
 
 import IconButton from '@/components/iconButton'
+import Dropdown from '@/components/dropdown'
 
 export default function Index() {
+    const [showDropdown, setShowDropdown] = useState(false)
+
     const onPressSearch = () => {
-        alert('搜索')
+        alert('搜索');
     }
 
     const onPressAdd = () => {
-        alert('添加')
+        setShowDropdown(!showDropdown);
+    }
+
+    const onCloseDropdown = () => {
+        setShowDropdown(false);
     }
 
     return (
@@ -25,6 +33,7 @@ export default function Index() {
                     )
                 }}
             />
+            <Dropdown visible={showDropdown} onClose={onCloseDropdown}/>
             <FlatList
                 data={data}
                 style={styles.list}
